@@ -12,6 +12,24 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+        <plugin>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.1</version>
+        </plugin>
+        <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>exec-maven-plugin</artifactId>
+            <version>1.2.1</version>
+            <configuration>
+                <mainClass>com.remnantkevin.organiser.App</mainClass>
+            </configuration>
+        </plugin>
+    </plugins>
+  </build>
+
   <dependencies>
 
     <!-- JUNIT -->
@@ -40,6 +58,14 @@
         <groupId>com.fasterxml.jackson.core</groupId>
         <artifactId>jackson-annotations</artifactId>
         <version>2.9.7</version>
+    </dependency>
+
+    <!-- AWS -->
+    <!-- https://mvnrepository.com/artifact/software.amazon.awssdk/aws-sdk-java -->
+    <dependency>
+        <groupId>software.amazon.awssdk</groupId>
+        <artifactId>aws-sdk-java</artifactId>
+        <version>2.1.0</version>
     </dependency>
 
   </dependencies>

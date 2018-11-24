@@ -25,3 +25,6 @@ hs_err_pid*
 .settings
 .vscode
 target/
+
+remnant-kevin-organiser-access.txt
+set_credentials.sh
