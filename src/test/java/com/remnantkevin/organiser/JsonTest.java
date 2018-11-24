@@ -14,6 +14,7 @@ public class JsonTest {
     assertNotEquals(null, note);
   }
 
+  @Test
   public void test_ignoresUnknownFields() {
     Json json = new Json();
     Note note = json.getNote("{\"title\": \"some title\", \"name\": \"roland\"}");

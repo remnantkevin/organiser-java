@@ -28,3 +28,5 @@ target/
 
 remnant-kevin-organiser-access.txt
 set_credentials.sh
+.classpath
+**/.DS_Store
