@@ -1,11 +1,16 @@
 package com.remnantkevin.organiser;
 
-public class Note {
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
-    public String title;
-    public String content;
-    public Long createdAt;
-    public Long archivedAt;
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Note {
+    @JsonProperty("title") public String title;
+    @JsonProperty("content") public String content;
+    @JsonProperty("createdAt") public Long createdAt;
+    @JsonProperty("archivedAt") public Long archivedAt;
+
+    public Note() {}
 
     public Note(String title, String content, Long createdAt, Long archivedAt) {
         this.title = title;
@@ -13,5 +18,4 @@ public class Note {
         this.createdAt = createdAt;
         this.archivedAt = archivedAt;
     }
-
 }
