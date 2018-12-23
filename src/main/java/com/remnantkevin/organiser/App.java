@@ -6,8 +6,8 @@ public class App {
     public static void main (String [] args){
         System.out.println("\nWelcome to Organiser v0.1\n");
 
-        DynamoDB dynamodb = new DynamoDB();
-        List<Note> notes = dynamodb.getAllNotes();
+        NoteStore noteStore = new NoteStore();
+        List<Note> notes = noteStore.getAllNotes();
         for(Note note : notes){
             System.out.println("====================");
             System.out.println(note.title);
